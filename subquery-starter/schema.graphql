@@ -2,15 +2,15 @@ type StarterEntity @entity {
 
   id: ID! #id is a required field
 
-  field1: Int!
+  block_number: Int!
 
-  field2: String #filed2 is an optional field
+  account: String #filed2 is an optional field
 
-  field3: BigInt
+  balance: BigInt
 
-  field4: Date
+  timestamp: Date
 
-  field5: Boolean
+  flag: Boolean
 
 
 
