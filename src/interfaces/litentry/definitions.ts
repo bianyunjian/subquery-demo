@@ -26,7 +26,7 @@ export default {
     ClassIdOf: "ClassId",
     TokenId: "u64",
     TokenIdOf: "TokenId",
-    Properties: { _enum: ["Transferable", "Burnable"] },
+    Properties: { _enum: ["None","Transferable", "Burnable","Both"] },
     HashByte32: "[u8; 32]",
     CID: "Vec<u8>",
     ClassType: {

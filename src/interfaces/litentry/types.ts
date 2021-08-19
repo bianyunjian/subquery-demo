@@ -56,8 +56,10 @@ export interface ParachainInherentData extends u64 {}
 
 /** @name Properties */
 export interface Properties extends Enum {
+  readonly isNone: boolean;
   readonly isTransferable: boolean;
   readonly isBurnable: boolean;
+  readonly isBoth: boolean;
 }
 
 /** @name QueryKey */
