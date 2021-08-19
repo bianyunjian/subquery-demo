@@ -7,7 +7,9 @@
     "build": "tsc -b",
     "prepack": "rm -rf dist && npm build",
     "test": "jest",
-    "codegen": "./node_modules/.bin/subql codegen"
+    "codegen": "./node_modules/.bin/subql codegen",
+    "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package litentry/interfaces --input ./src/interfaces",
+    "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package litentry/interfaces --endpoint ./src/interfaces/litentry.json --output ./src/interfaces"
   },
   "homepage": "https://github.com/subquery/subql-starter",
   "repository": "github:subquery/subql-starter",
@@ -18,10 +20,14 @@
   ],
   "author": "yunjian.bian",
   "license": "Apache-2.0",
+  "dependencies": {
+    "@polkadot/api": "^5.5.2",
+    "pino": "^6.13.0"
+  },
   "devDependencies": {
-    "@polkadot/api": "^4.6.2",
+    "@polkadot/typegen": "^5.5.2",
     "@subql/types": "latest",
-    "typescript": "^4.1.3",
-    "@subql/cli": "latest"
+    "ts-node": "^8.6.2",
+    "typescript": "^4.1.3"
   }
 }

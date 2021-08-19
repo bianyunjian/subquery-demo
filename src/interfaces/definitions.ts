@@ -1,0 +1,1 @@
+export { default as litentry } from './litentry/definitions';

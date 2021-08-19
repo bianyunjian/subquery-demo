@@ -11,8 +11,10 @@
     "rootDir": "src",
     "target": "es2017"
   },
-  "include": [
-    "src/**/*",
-    "node_modules/@subql/types/dist/global.d.ts"
-  ]
+  "paths": {
+    "litentry/*": ["src/*"],
+    "@polkadot/api/augment": ["src/interfaces/augment-api.ts"],
+    "@polkadot/types/augment": ["src/interfaces/augment-types.ts"]
+  },
+  "include": ["src/**/*", "node_modules/@subql/types/dist/global.d.ts"]
 }
